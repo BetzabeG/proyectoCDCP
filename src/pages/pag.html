@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección WARA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #204e47; /* Azul noche */
+            color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: hsl(160, 81%, 21%); /* Azul más claro */
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        h2 {
+            margin-top: 40px;
+            font-size: 2rem;
+        }
+        .wara-secciones {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        .servicio-item {
+            background-color: #1e6756;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            width: 250px;
+            text-align: center;
+        }
+        .servicio-item img {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            width: 100px;
+            height: 100px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #39CCCC; /* Color atractivo */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3D9970;
+        }
+        footer {
+            margin-top: 40px;
+            background-color: #1a6253;
+            padding: 20px;
+            color: #D4F4F7;
+        }
+        footer h2 {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sección WARA</h1>
+    </header>
+
+    <section class="wara-secciones">
+        <h2>Opciones</h2>
+        <nav>
+            <a href="..\index.html" class="activo">Regresar</a>
+        </nav>
+        
+        <div class="servicio-item">
+            <img src="imagenes/img_5_biblioteca.jpg" alt="Icono Biblioteca">
+            <h3>Biblioteca</h3>
+            <button onclick="location.href='#'">Ir a la Biblioteca</button>
+        </div>
+        
+        <div class="servicio-item">
+            <img src="imagenes/img_6_flashcards.jpeg" alt="Icono Flash Cards">
+            <h3>Flash Cards</h3>
+            <button onclick="location.href='#'">Ir a Flash Cards</button>
+        </div>
+        
+        <div class="servicio-item">
+            <img src="imagenes/img_7_quiz.jpg" alt="Icono Banco de Preguntas">
+            <h3>Banco de Preguntas</h3>
+            <button onclick="location.href='#'">Ir a Banco de Preguntas</button>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Derechos de autor © 2024. Todos los derechos reservados.</h2>
+    </footer>
+</body>
+</html>
