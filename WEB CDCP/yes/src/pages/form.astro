@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Diagnóstico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        select, input[type="radio"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        .question {
+            display: none;
+        }
+        .options {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        .options label {
+            font-weight: normal;
+        }
+        .submit-btn {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Formulario de Diagnóstico</h2>
+    <form id="diagnosis-form">
+        <div class="form-group">
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo" required>
+                <option value="">Seleccione...</option>
+                <option value="femenino">Femenino</option>
+                <option value="masculino">Masculino</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="1" required>
+        </div>
+
+        <!-- Preguntas de síntomas -->
+        <div id="symptom-questions">
+            <div class="form-group question">
+                <label>¿Usted fuma?</label>
+                <div class="options">
+                    <label><input type="radio" name="fuma" value="si" required> Sí</label>
+                    <label><input type="radio" name="fuma" value="no"> No</label>
+                </div>
+            </div>
+            <div class="form-group question">
+                <label>¿Tiene dedos amarillos?</label>
+                <div class="options">
+                    <label><input type="radio" name="dedos_amarillos" value="si" required> Sí</label>
+                    <label><input type="radio" name="dedos_amarillos" value="no"> No</label>
+                </div>
+            </div>
+            <div class="form-group question">
+                <label>¿Padece de ansiedad?</label>
+                <div class="options">
+                    <label><input type="radio" name="ansiedad" value="si" required> Sí</label>
+                    <label><input type="radio" name="ansiedad" value="no"> No</label>
+                </div>
+            </div>
+            <div class="form-group question">
+                <label>¿Presenta alguna enfermedad crónica?</label>
+                <div class="options">
+                    <label><input type="radio" name="enfermedad_cronica" value="si" required> Sí</label>
+                    <label><input type="radio" name="enfermedad_cronica" value="no"> No</label>
+                </div>
+            </div>
+            <div class="form-group question">
+                <label>¿Siente fatiga?</label>
+                <div class="options">
+                    <label><input type="radio" name="fatiga" value="si" required> Sí</label>
+                    <label><input type="radio" name="fatiga" value="no"> No</label>
+                </div>
+            </div>
+            <div class="form-group question">
+                <label>¿Usted tiene alguna alergia?</label>
+                <div class="options">
+                    <label><input type="radio" name="alergia" value="si" required> Sí</label>
+                    <label><input type="radio" name="alergia" value="no"> No</label>
+                </div>
+            </div>
+            <div class="form-group question">
+                <label>¿Usted consume alcohol?</label>
+                <div class="options">
+                    <label><input type="radio" name="alcohol" value="si" required> Sí</label>
+                    <label><input type="radio" name="alcohol" value="no"> No</label>
+                </div>
+            </div>
+            <div class="form-group question">
+                <label>¿Ha presentado tos?</label>
+                <div class="options">
+                    <label><input type="radio" name="tos" value="si" required> Sí</label>
+                    <label><input type="radio" name="tos" value="no"> No</label>
+                </div>
+            </div>
+            <div class="form-group question">
+                <label>¿Tiene dificultad para respirar?</label>
+                <div class="options">
+                    <label><input type="radio" name="respirar" value="si" required> Sí</label>
+                    <label><input type="radio" name="respirar" value="no"> No</label>
+                </div>
+            </div>
+            <div class="form-group question">
+                <label>¿Tiene dificultad para tragar?</label>
+                <div class="options">
+                    <label><input type="radio" name="tragar" value="si" required> Sí</label>
+                    <label><input type="radio" name="tragar" value="no"> No</label>
+                </div>
+            </div>
+            <div class="form-group question">
+                <label>¿Presenta dolor de pecho?</label>
+                <div class="options">
+                    <label><input type="radio" name="pecho" value="si" required> Sí</label>
+                    <label><input type="radio" name="pecho" value="no"> No</label>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Enviar</button>
+    </form>
+</div>
+
+<script>
+    const ageInput = document.getElementById("edad");
+    const questions = document.querySelectorAll(".question");
+    const form = document.getElementById("diagnosis-form");
+
+    ageInput.addEventListener("change", () => {
+        if (ageInput.value) {
+            questions.forEach(question => {
+                question.style.display = "block";
+            });
+        }
+    });
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        alert("Formulario enviado. Los resultados se mostrarán en breve.");
+        
+    });
+</script>
+
+</body>
+</html>
